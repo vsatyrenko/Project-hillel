@@ -1,0 +1,137 @@
+.footer {
+    background: #F5F5FA;
+    border-radius: 0px;
+}
+
+.footer-box {
+    padding: 0 30px 30px 30px;
+    text-align: center;
+
+    &__adress {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #323264;
+        padding-bottom: 10px;
+    }
+
+    &__link {
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $link;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding-top: 21px;
+        padding-bottom: 30px;
+    }
+
+    &__tel {
+        font-size: 16px;
+        line-height: 20px;
+        color: #46466E;
+        padding: 10px 0;
+    }
+
+    &__email {
+        font-size: 16px;
+        line-height: 20px;
+        color: $link;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $gray;
+    }
+}
+
+.footer-box::before {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #E6E6F0;
+    margin-bottom: 30px;
+}
+
+@media (min-width:768px) {
+    .footer-box {
+        display: grid;
+
+        &__inner {
+            display: grid;
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+            grid-row: 1;
+        }
+
+        &__adress {
+            padding-bottom: 0;
+            display: flex;
+        }
+
+        &__adress::after {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #E6E6F0;
+            align-self: center;
+            margin: 0 10px;
+            }
+
+
+        &__item {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__text {
+            text-align: end;
+            grid-row: 1;
+        }
+
+         &__email:hover {
+        color: $active;
+    }
+
+        &__tel {
+            display: flex;
+        }
+
+                &__tel::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #E6E6F0;
+            align-self: center;
+            margin: 0 10px;
+            }
+
+                    &__tel::after {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #E6E6F0;
+            align-self: center;
+            margin: 0 10px;
+            }
+    }
+
+    .fb:hover path {
+        color: $active;
+            }
+}

@@ -1,0 +1,122 @@
+.team-section {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.teams {
+
+
+   &__box {
+    background: #F5F5FA;
+    border-radius: 12px;
+   }
+
+    &__item {
+        padding: 30px;
+    }
+
+    &__text {
+        font-size: 30px;
+        line-height: 37px;
+        padding-top: 5px;
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+    }
+
+}
+
+.services__link::after {
+    content: "";
+    background-image: url(../img/arrow.svg);
+    width: 12px;
+    height: 13px;
+    display: inline-block;
+    padding-left: 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.employee {
+    padding: 0 30px 30px 30px;
+
+    &__name {
+        font-size: 16px;
+        line-height: 20px;
+        color: $gray;
+        padding-bottom: 6px;
+    }
+
+    &__position {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $gray;
+    }
+
+}
+
+.img-reponsiv {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.box {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+
+    &__circle {
+    border-radius: 50%;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: #24A3FF;
+    opacity: 0.2;
+}
+
+    &__circle--blue {
+        background: #24A3FF;
+        opacity: 1;
+}
+
+    &__circle:not(:last-child) {
+        margin-right: 15px;
+    }
+
+     &__circle:hover {
+        background: #24A3FF;
+        opacity: 1;
+     }
+}
+
+@media (min-width:768px) {
+   .teams__text {
+    line-height: 46px;
+   }
+}
+
+@media (min-width:992px) {
+    .teams {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 60px;
+    }
+
+    .employee {
+        padding: 0 30px;
+    }
+}
+
+
+@media (min-width:1200px) {
+    .teams {
+    grid-template-columns: 400px 1fr;
+    }
+}

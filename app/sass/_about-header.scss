@@ -1,0 +1,69 @@
+.header-top--color {
+    background: #F5F5FA;
+}
+
+.header-top__link--color {
+    color: $gray;
+}
+
+.tel--color {
+    color: $gray;
+}
+
+.burger-menu--color {
+    background-image: url(../img/hamburger-black.svg);
+}
+
+.logo {
+    display: flex;
+
+    &__slash {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #323264;
+    display: flex;
+    }
+
+    &__slash::before {
+        content: '';
+        background-image: url(../img/slash.svg);
+        width: 12px;
+        height: 26px;
+        background-size: cover;
+        margin: 0 4px;
+        display: inline-block;
+    }
+}
+
+.fb__icon--color  path{
+    fill: $gray;
+}
+
+@media (min-width:768px) {
+    .header-top--color {
+        background-color: transparent;
+    }
+
+    .adress--color {
+        color: $gray;
+    }
+
+    .logo__slash {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+     .logo__slash::before {
+        width: 21px;
+        height: 47px;
+    }
+
+    .menu-list__link {
+        color: $link;
+    }
+
+    .menu-list__link:hover::after {
+            background-color: $link;
+        }
+}

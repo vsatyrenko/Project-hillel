@@ -1,0 +1,105 @@
+.about-services {
+    padding: 30px 0;
+}
+
+.services__title--fix {
+    padding-top: 0;
+    padding-bottom: 28px;
+}
+
+.experience__text--fix {
+    color: #000000;
+}
+
+.experience__text--fix:not(:last-child) {
+    padding-bottom: 30px;
+}
+
+
+.about-experience {
+    padding-left:  30px;
+    position: relative;
+
+
+    &::before {
+        content: '';
+        display: inline-block;
+        border-left: 4px solid #e6e6f0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+
+
+
+        &__digit {
+            font-size: 36px;
+            line-height: 44px;
+            padding-bottom: 10px;
+            background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+        }
+
+        &__digit::before {
+            content: '';
+            display: block;
+            background-image: url(../img/experience.svg);
+            width: 32px;
+            height: 32px;
+            background-repeat: no-repeat;
+            padding-right: 8px;
+        }
+
+        &__digit--pic::before {
+            background-image: url(../img/clients.svg);
+            width: 32px;
+            height: 32px;
+        }
+
+        &__digit--img::before {
+            background-image: url(../img/probono.svg);
+            width: 32px;
+            height: 32px;
+        }
+
+        &__text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #323264;
+        }
+}
+
+.about-experience:not(:last-child) {
+            padding-bottom: 40px;
+        }
+
+@media (min-width:768px) {
+    .about-services {
+        padding-top: 60px;
+    }
+}
+
+@media (min-width:992px) {
+    .experience__text--fix {
+        padding-left: 0;
+    }
+
+    .about-services__box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    }
+
+@media (min-width:1200px) {
+    .about-services__box {
+        grid-template-columns: 2fr 1fr;
+
+    }
+}
